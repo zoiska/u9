@@ -7,4 +7,6 @@ add_executable(u9 main.c
         circle.c
         circle.h
         rect.c
-        rect.h)
+        rect.h
+        Mandelbrot.c
+        Mandelbrot.h)
