@@ -16,6 +16,8 @@ void aufg1(){
 
 int main() {
     //aufg1
-    //start();
+
+
+    //start();  <-- UNIX System only
     return 0;
 }
