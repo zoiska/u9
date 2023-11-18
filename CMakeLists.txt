@@ -14,9 +14,14 @@ add_executable(u9 main.c
         circle.h
         rect.c
         rect.h
+        mandelbrot.c
+        mandelbrot.h
 )
 
 # Link against ImageMagick libraries
+target_compile_definitions(u9 PRIVATE MAGICKCORE_HDRI_ENABLE=1)
+target_compile_definitions(u9 PRIVATE MAGICKCORE_QUANTUM_DEPTH=16)
+
 target_link_libraries(u9 ${ImageMagick_LIBRARIES})
 
 # Additional configuration for Windows
@@ -37,7 +42,3 @@ if (WIN32)
                 ${DLL} $<TARGET_FILE_DIR:u9>)
     endforeach()
 endif()
-
-#if(UNIX)
-#
-#endif()
