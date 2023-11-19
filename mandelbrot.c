@@ -4,37 +4,37 @@
 #define WIDTH 10000
 #define HEIGHT 8000
 
-int mandelbrotb(double real, double imag, int max_iter) {
-    int iter = 0;
-    double r = real;
-    double i = imag;
+int mandelbrot(double x, double y, int iter) {
+    int z = 0;
+    double x1 = x;
+    double y1 = y;
 
-    while (iter < max_iter) {
-        double r2 = r * r;
-        double i2 = i * i;
+    while (z < iter) {
+        double x2 = x * x;
+        double y2 = y * y;
 
-        if (r2 + i2 > 4.0) {
+        if (x2 + y2 > 4.0) {
             break;
         }
 
-        i = 2 * r * i + imag;
-        r = r2 - i2 + real;
+        y = 2 * x * y + y;
+        x = x2 - y2 + x;
 
-        iter++;
+        z++;
     }
 
-    return iter;
+    return z;
 }
 
 void draw(MagickWand *wand) {
     int max_iter = 1000;
 
-    for (int y = 0; y < HEIGHT; y++) {
-        for (int x = 0; x < WIDTH; x++) {
-            double real = (x - WIDTH / 2.0) * 4.0 / WIDTH;
-            double imag = (y - HEIGHT / 2.0) * 4.0 / HEIGHT;
+    for (int i = 0; i < HEIGHT; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            double x = (j - WIDTH / 2.0) * 4.0 / WIDTH;
+            double y = (i - HEIGHT / 2.0) * 4.0 / HEIGHT;
 
-            int color = mandelbrotb(real, imag, 256);
+            int color = mandelbrot(x, y, 256);
 
             PixelWand *pixel_wand = NewPixelWand();
             PixelSetRed(pixel_wand, color % 256 / 255.0);
