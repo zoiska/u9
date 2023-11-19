@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
 #include "rect.h"
 #include "circle.h"
 #include "mandelbrot.h"
@@ -83,8 +83,24 @@ void aufg4(char *str, char *control){
 char *childrenSong = {"Drei Chinesen mit dem Kontrabass\nsassen auf der Strasse und erzaehlten sich was.\nDa kam die "
                       "Polizei, fragt: Was ist denn das?\nDrei Chinesen mit dem Kontrabass."};
 
-void aufg5(){
+struct Book{
+    char title[50];
+    char author[50];
+    char subject[50];
+    int book_id;
+};
 
+void aufg5(){
+    struct Book buch = {"Programmieren in C", "Heimo Gaicher", "Einstieg in C Programmierung",
+            6495407};
+    printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", buch.title, buch.author, buch.subject, buch.book_id);
+
+    struct Book *buuuch = (struct Buch *)malloc(sizeof(struct Book));
+    strcpy(buuuch->title, "How to follow me and why you should.");
+    strcpy(buuuch->author, "Zeeskes Kalingkaling");
+    strcpy(buuuch->subject, "Cultism");
+    buuuch->book_id = 1111111;
+    printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", buuuch->title, buuuch->author, buuuch->subject, buuuch->book_id);
 }
 
 int main() {
@@ -94,7 +110,6 @@ int main() {
     //aufg3c(32);
     //aufg4(childrenSong, "aeiou");
     aufg5();
-
 
     //start();  <-- UNIX System only
     return 0;
