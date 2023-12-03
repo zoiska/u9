@@ -95,21 +95,35 @@ void aufg5(){
             6495407};
     printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", buch.title, buch.author, buch.subject, buch.book_id);
 
-    struct Book *buuuch = (struct Buch *)malloc(sizeof(struct Book));
-    strcpy(buuuch->title, "How to follow me and why you should.");
-    strcpy(buuuch->author, "Zeeskes Kalingkaling");
-    strcpy(buuuch->subject, "Cultism");
-    buuuch->book_id = 1111111;
-    printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", buuuch->title, buuuch->author, buuuch->subject, buuuch->book_id);
+    //struct Book *book = *malloc(sizeof(struct Book));
+    //7strcpy(book->title, "How to follow me and why you should.");
+    //strcpy(book->author, "Zeeskes Kalingkaling");
+    //strcpy(book->subject, "Cultism");
+    //book->book_id = 1111111;
+    //printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", book->title, book->author, book->subject, book->book_id);
+}
+
+struct struct1{
+    char attribut1[50];
+    char attribut2[50];
+    struct struct2{
+        char attribut1[50];
+        char attribut2[50];
+    };
+};
+
+void initializeBook(){
+
 }
 
 int main() {
-    //aufg1u2
-    //aufg3a(2.5);
-    //aufg3b(12);
-    //aufg3c(32);
-    //aufg4(childrenSong, "aeiou");
+    aufg1u2();
+    aufg3a(2.5);
+    aufg3b(12);
+    aufg3c(32);
+    aufg4(childrenSong, "aeiou");
     aufg5();
+    initializeBook();
 
     //start();  <-- UNIX System only
     return 0;
