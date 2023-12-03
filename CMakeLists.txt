@@ -19,9 +19,6 @@ if(UNIX)
 
     set(CMAKE_C_STANDARD 11)
 
-    set(IMAGE_MAGICK_PATH "C:/Program Files (x86)/ImageMagick-7.1.1-Q8-HDRI")
-    set(CMAKE_PREFIX_PATH "${IMAGE_MAGICK_PATH};${CMAKE_PREFIX_PATH}")
-
     add_executable(u9 main.c
             circle.c
             circle.h
@@ -39,7 +36,10 @@ if(UNIX)
 endif()
 
 
-# # Specify the location of ImageMagick libraries (modify the path accordingly)
+#
+# set(IMAGE_MAGICK_PATH "C:/Program Files (x86)/ImageMagick-7.1.1-Q8-HDRI")
+# set(CMAKE_PREFIX_PATH "${IMAGE_MAGICK_PATH};${CMAKE_PREFIX_PATH}")
+# Specify the location of ImageMagick libraries (modify the path accordingly)
 #    link_directories("C:/Program Files (x86)/ImageMagick-7.1.1-Q8-HDRI/lib")
 #
 #    # Link against the specific ImageMagick libraries
