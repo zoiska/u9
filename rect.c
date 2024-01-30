@@ -9,21 +9,21 @@ double umfangRechteck(double a, double b){
 
 double flaecheRechteck(double a, double b){
     double f = a * b;
-    printf("Fläche: %.2fm²\n", f);
+    printf("Flaeche: %.2fm^2\n", f);
     return(f);
 }
 
 void istQuadrat(double a, double b){
     if(a == b){
-        printf("Die Kantenlängen ergeben ein Quadrat.\n");
+        printf("Die Kantenlaengen ergeben ein Quadrat.\n");
     }
     else{
-        printf("Die Kantenlängen ergeben ein Rechteck.\n");
+        printf("Die Kantenlaengen ergeben ein Rechteck.\n");
     }
 }
 
 double berechneFlaeche3D(double a, double b, double c){
     double f = a * b * c;
-    printf("Fläche: %.2lfcm³", f);
+    printf("Flaeche: %.2lfcm^3", f);
     return(f);
 }

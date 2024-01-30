@@ -10,6 +10,6 @@ double umfangKreis(double radius){
 
 double flaecheKreis(double r){
     double f = M_PI * r*r;
-    printf("Fläche des Kreises: %.2f\n", f);
+    printf("Flaeche des Kreises: %.2f\n", f);
     return(f);
 }

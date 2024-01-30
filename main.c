@@ -43,17 +43,17 @@ void aufg3a(double x){
  *      either return a positive or a negative HUGE_VALL (HUGE_VALL or -HUGE_VALL) to indicate the sign of the result.
  * */
 
-void aufg3b(int x){
+void aufg3b(float x){
     //sqrt() - (double)
     double erg1 = sqrt(x);
     //sqrtf() - (float)
     float erg2 = sqrtf(x);
     //sqrtl() - (long double)
     long double erg3 = sqrtl(x);
-    printf("%lf %f %Lf\n", erg1, erg2, erg3);
+    printf("%lf %lf %Lf\n", erg1, erg2, erg3);
 }
 
-void aufg3c(int x){
+void aufg3c(float x){
     //sin() - (double)
     double erg1 = sin(x);
     //sinf() - (float)
@@ -90,12 +90,11 @@ struct Book{
 };
 
 void aufg5(){
-    struct Book buch = {"Programmieren in C", "Heimo Gaicher", "Einstieg in C Programmierung",
-            6495407};
+    struct Book buch = {"Programmieren in C", "Heimo Gaicher", "Einstieg in C Programmierung",6495407};
     printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", buch.title, buch.author, buch.subject, buch.book_id);
 
     //struct Book *book = *malloc(sizeof(struct Book));
-    //7strcpy(book->title, "How to follow me and why you should.");
+    //strcpy(book->title, "How to follow me and why you should.");
     //strcpy(book->author, "Zeeskes Kalingkaling");
     //strcpy(book->subject, "Cultism");
     //book->book_id = 1111111;
@@ -111,10 +110,10 @@ int main() {
     //aufg3a(2.5);
     //aufg3b(12);
     //aufg3c(32);
-    //aufg4(childrenSong, "aeiou");
-    //aufg5();
+    aufg4(childrenSong, "aeiou");
+    aufg5();
     //initializeBook();
 
-    start();  //<-- UNIX System only
+    //start();  //<-- UNIX System only
     return 0;
 }
