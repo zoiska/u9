@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#include <stdlib.h>
 #include "rect.h"
 #include "circle.h"
 #include "mandelbrot.h"
@@ -103,28 +102,19 @@ void aufg5(){
     //printf("Titel: %s\nAutor: %s\nThema des Buches: %s\nBuch Code: %d\n", book->title, book->author, book->subject, book->book_id);
 }
 
-struct struct1{
-    char attribut1[50];
-    char attribut2[50];
-    struct struct2{
-        char attribut1[50];
-        char attribut2[50];
-    };
-};
-
 void initializeBook(){
 
 }
 
 int main() {
-    aufg1u2();
-    aufg3a(2.5);
-    aufg3b(12);
-    aufg3c(32);
-    aufg4(childrenSong, "aeiou");
-    aufg5();
-    initializeBook();
+    //aufg1u2();
+    //aufg3a(2.5);
+    //aufg3b(12);
+    //aufg3c(32);
+    //aufg4(childrenSong, "aeiou");
+    //aufg5();
+    //initializeBook();
 
-    //start();  <-- UNIX System only
+    start();  //<-- UNIX System only
     return 0;
 }

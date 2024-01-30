@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.26)
 project(u9 C)
 
 if(WIN32)
+    set(CMAKE_C_STANDARD 11)
+
     add_executable(u9 main.c
             circle.c
             circle.h
@@ -32,7 +34,7 @@ if(UNIX)
     target_compile_definitions(u9 PRIVATE MAGICKCORE_HDRI_ENABLE=1)
     target_compile_definitions(u9 PRIVATE MAGICKCORE_QUANTUM_DEPTH=16)
 
-    target_link_libraries(u9 ${ImageMagick_LIBRARIES})
+target_link_libraries(u9 ${ImageMagick_LIBRARIES})
 endif()
 
 
